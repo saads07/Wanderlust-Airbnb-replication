@@ -1,26 +1,79 @@
-WonderLust
-Project Duration: October 2023 – December 2023
+# Wanderlust – Airbnb Inspired Full-Stack Web Application
 
-WonderLust is a full-stack web application inspired by Airbnb, designed to provide users with a platform to list their properties or hotels for rent. The application offers a seamless experience for both property owners and renters, ensuring efficient property management and exploration.
+Wanderlust is a full-stack web application inspired by Airbnb, designed to provide users with a platform to explore and list properties or hotels for rent.
 
-Key Features
-Full-Stack Development
-The application was developed using HTML, CSS, and JavaScript for the front-end, providing a responsive and user-friendly interface.
-Node.js and Express.js were utilized for the back-end, creating a robust server framework to handle client requests and server responses efficiently.
-Database Management
-MongoDB was integrated for database management, enabling efficient data storage and retrieval. This NoSQL database was chosen for its flexibility and scalability, accommodating diverse property attributes and user data.
-CRUD Functionality
-Implemented comprehensive CRUD (Create, Read, Update, Delete) functionality for property listings. This allows users to add new properties, view detailed information, update existing listings, and delete properties as needed, ensuring a smooth and intuitive user experience.
-Image Management
-Cloudinary was utilized for seamless image storage and retrieval within the application. This cloud-based image management service enables users to upload property images effortlessly, which are then optimized and delivered swiftly, enhancing the visual appeal of listings.
-Interactive Maps
-Integrated Mapbox to dynamically display property locations on an interactive map interface. This feature provides users with a geographical context of the listings, making it easier to explore properties and aiding in decision-making.
-User Authentication
-Implemented robust user authentication functionalities to ensure secure access and data management. This includes user registration, login, and session management, safeguarding user data and restricting unauthorized access, thereby maintaining data integrity and privacy.
-Technologies Used
-Front-End: HTML, CSS, JavaScript
-Back-End: Node.js, Express.js
-Database: MongoDB
-Image Management: Cloudinary
-Maps: Mapbox
-Authentication: Custom authentication middleware using Express.js and session management
+The application includes property management, user authentication, image uploads, reviews, and interactive maps, providing a complete full-stack web development experience.
+
+## Key Features
+
+### Property Listings
+- Create new property listings
+- View detailed property information
+- Edit existing listings
+- Delete listings
+- Complete CRUD functionality
+
+### User Authentication
+- User registration and login
+- Session-based authentication
+- Protected routes for authorized users
+- Secure access to user-specific functionality
+
+### Image Management
+- Cloudinary integration for property image uploads
+- Cloud-based image storage and retrieval
+- Support for JPG, JPEG, and PNG images
+
+### Interactive Maps
+- Mapbox integration
+- Displays property locations on an interactive map
+- Provides geographical context for listings
+
+### Reviews
+- Users can add reviews to property listings
+- Reviews are associated with individual listings
+- Review management functionality
+
+## Tech Stack
+
+**Frontend**
+- HTML
+- CSS
+- JavaScript
+- EJS
+
+**Backend**
+- Node.js
+- Express.js
+
+**Database**
+- MongoDB
+
+**Cloud & APIs**
+- Cloudinary
+- Mapbox
+
+**Authentication & Validation**
+- Express Session
+- Authentication Middleware
+- Joi Validation
+
+## Project Structure
+
+- `controllers/` – Application controllers
+- `models/` – MongoDB models
+- `router/` – Express routes
+- `views/` – EJS templates
+- `public/` – CSS and client-side JavaScript
+- `utils/` – Utility functions
+- `uploads/` – Uploaded files
+- `app.js` – Main application entry point
+
+## Environment Variables
+
+The application uses environment variables for external services and sensitive configuration.
+
+```env
+CLOUD_NAME=your_cloudinary_cloud_name
+CLOUD_API_KEY=your_cloudinary_api_key
+CLOUD_API_SECRET=your_cloudinary_api_secret
