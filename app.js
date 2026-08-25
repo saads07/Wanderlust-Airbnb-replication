@@ -22,8 +22,8 @@ const userRouter = require("./router/user.js");
 
 // const { parseArgs } = require("util");
 
-const MONGO_URL = "mongodb://127.0.0.1:27017/Mproject";
-
+//const MONGO_URL = "mongodb://127.0.0.1:27017/Mproject";
+const MONGO_URL = process.env.MONGO_URL;
 main()
   .then(() => {
     console.log("connected to DB");
@@ -44,7 +44,8 @@ app.engine("ejs", ejsMate);
 app.use(express.static(path.join(__dirname, "/public")));
 
 const sessionOption = {
-  secret: "mySuperSceretCode",
+  //secret: "mySuperSceretCode",
+  secret: process.env.SESSION_SECRET,
   resave: false,
   saveUninitialized: true,
   cookie: {
@@ -87,6 +88,11 @@ app.use((err, req, res, next) => {
   // res.status(statuscode).send(message);
 });
 
-app.listen(8080, () => {
-  console.log("server is listening to port");
+// app.listen(8080, () => {
+//   console.log("server is listening to port");
+// });
+const PORT = process.env.PORT || 8080;
+
+app.listen(PORT, () => {
+  console.log(`server is listening on port ${PORT}`);
 });
